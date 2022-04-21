@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from pyrpnapi.calc import calculate
 
+
 app = FastAPI()
 
 
