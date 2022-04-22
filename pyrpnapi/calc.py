@@ -1,3 +1,6 @@
+"""
+Reverse Polish Notation expression calculation
+"""
 import operator
 import decimal
 
@@ -11,13 +14,16 @@ operators = {
 
 
 def calculate(elements):
+    """
+    Calculate the expression.
+    """
     pile = []
     for element in elements:
         if element in operators:
             func = operators[element]
             val1 = decimal.Decimal(pile.pop())
             val2 = decimal.Decimal(pile.pop())
-            pile.append(func(val1, val2))
+            pile.append(func(val2, val1))
         else:
             pile.append(decimal.Decimal(element))
     return pile[0]
