@@ -1,21 +1,11 @@
-Python Project Boilerplate
-==========================
+PyRPNAPI
+========
 
-This repo provides a standardized template for modern Python projects based
-on the layout [recommended by Kenneth Reitz](http://www.kennethreitz.org/essays/repository-structure-and-python).
-
-Features:
-* Editable install support
-* Support for installing development dependencies through setup.py
-* PyTest unit-test support
-* PyLint
-* An [.editorconfig](http://editorconfig.org/) file
-* Sphinx documentation generation
-* `pyproject.toml` PEP 517/518 support
+This is simple service providing one enpoint calculating Reverse Polish Notation expression value.
 
 # Getting Started
 
-The project is ready to run as is. You will need Python 2.7 or later.
+The project is ready to run as is. You will need Python 3.7 or later.
 
 ## Create a Virtual Environment
 
