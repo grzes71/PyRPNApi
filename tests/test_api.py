@@ -6,7 +6,7 @@ from pyrpnapi.calc import calculate
 
 def test_single_value():
     "Test single value"
-    assert calculate('123') == Decimal(123)
+    assert calculate(['123']) == Decimal(123)
 
 def test_add():
     "Test adding"
