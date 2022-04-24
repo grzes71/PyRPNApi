@@ -5,7 +5,7 @@ import operator
 import decimal
 from collections import deque
 
-operators = {
+OPERATORS = {
     '+': operator.add,
     '-': operator.sub,
     '*': operator.mul,
@@ -19,11 +19,10 @@ def calculate(elements):
     """
     pile = deque()
     for element in elements:
-        if element in operators:
-            func = operators[element]
+        if element, fun in OPERATORS.items():
             val1 = decimal.Decimal(pile.pop())
             val2 = decimal.Decimal(pile.pop())
-            pile.append(func(val2, val1))
+            pile.append(fun(val2, val1))
         else:
             pile.append(decimal.Decimal(element))
     return pile.pop()

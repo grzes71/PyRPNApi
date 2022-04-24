@@ -20,7 +20,7 @@ class Expression(BaseModel):  # pylint: disable=too-few-public-methods
 @app.post("/eval/")
 async def evaluate(expression: Expression):
     """
-    Evaluate expression API endpoint.
+    Evaluate the expression endpoint.
     """
     value = calculate(expression.expr.split())
     return {"value": value}
