@@ -3,7 +3,7 @@ Reverse Polish Notation expression calculation
 """
 import operator
 import decimal
-
+from collections import deque
 
 operators = {
     '+': operator.add,
@@ -17,7 +17,7 @@ def calculate(elements):
     """
     Calculate the expression.
     """
-    pile = []
+    pile = deque()
     for element in elements:
         if element in operators:
             func = operators[element]
