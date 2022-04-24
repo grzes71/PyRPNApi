@@ -19,7 +19,8 @@ def calculate(elements):
     """
     pile = deque()
     for element in elements:
-        if element, fun in OPERATORS.items():
+        if element in OPERATORS:
+            fun = OPERATORS[element]
             val1 = decimal.Decimal(pile.pop())
             val2 = decimal.Decimal(pile.pop())
             pile.append(fun(val2, val1))
