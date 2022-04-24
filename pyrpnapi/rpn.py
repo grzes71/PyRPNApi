@@ -10,7 +10,7 @@ from pyrpnapi.calc import calculate
 app = FastAPI()
 
 
-class Expression(BaseModel):
+class Expression(BaseModel):  # pylint: disable=too-few-public-methods
     """
     Expression model class.
     """
