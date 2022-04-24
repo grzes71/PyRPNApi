@@ -26,4 +26,4 @@ def calculate(elements):
             pile.append(func(val2, val1))
         else:
             pile.append(decimal.Decimal(element))
-    return pile[0]
+    return pile.pop()
