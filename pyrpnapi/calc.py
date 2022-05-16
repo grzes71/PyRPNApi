@@ -1,8 +1,5 @@
-"""
-Reverse Polish Notation expression calculation
-"""
-import operator
-import decimal
+import os
+import operator, decimal
 from collections import deque
 
 OPERATORS = {
@@ -14,9 +11,6 @@ OPERATORS = {
 
 
 def calculate(elements):
-    """
-    Calculate the expression.
-    """
     pile = deque()
     for element in elements:
         if element in OPERATORS:
