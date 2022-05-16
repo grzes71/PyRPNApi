@@ -1,4 +1,6 @@
-
+"""
+RPN Calculator API
+"""
 from fastapi import FastAPI
 from pydantic import BaseModel
 from pyrpnapi.calc import calculate
@@ -13,5 +15,8 @@ class Expression(BaseModel):
 
 @app.post("/eval/")
 async def evaluate(expression: Expression):
+    """
+    Evaluate the expression and return evalated value.
+    """
     value = calculate(expression.expr.split())
     return {"value": value}
