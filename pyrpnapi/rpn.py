@@ -16,6 +16,12 @@ class Expression(BaseModel):  # pylint: disable=too-few-public-methods
     """
     expr: str
 
+@app.get("/")
+async def info():
+    """
+    Get app info
+    """
+    return {"info": __doc__}
 
 @app.post("/eval/")
 async def evaluate(expression: Expression):
