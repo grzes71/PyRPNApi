@@ -62,12 +62,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 archiveArtifacts artifacts: 'dist/**/*.whl', followSymlinks: false
-                withCredentials([string(credentialsId: 'heroku_myapp_token', variable: 'HEROKU_TOKEN')]) {
-                    catchError {
-                        bat 'git remote add heroku https://heroku:%HEROKU_TOKEN%@git.heroku.com/gk-test-application-1.git'
-                    }
-                    bat 'git push heroku master'
-                }
             }
         }
     }
